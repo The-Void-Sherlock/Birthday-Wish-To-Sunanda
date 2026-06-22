@@ -1,0 +1,1187 @@
+/* ==========================================
+GLOBAL RESET
+========================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+min-height:100vh;
+overflow:hidden;
+
+
+background:
+radial-gradient(circle at top,
+#243b55 0%,
+#141e30 40%,
+#0a0f1f 100%);
+
+color:white;
+
+
+}
+
+/* ==========================================
+PAGE SYSTEM
+========================================== */
+
+.page{
+position:absolute;
+width:100%;
+height:100vh;
+
+
+display:none;
+justify-content:center;
+align-items:center;
+
+padding:20px;
+
+animation:fadeIn 0.8s ease;
+
+
+}
+
+.page.active{
+display:flex;
+}
+
+@keyframes fadeIn{
+
+
+from{
+    opacity:0;
+    transform:translateY(20px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+}
+
+/* ==========================================
+GLASS CARD
+========================================== */
+
+.glass-card{
+
+
+width:100%;
+max-width:700px;
+
+padding:35px;
+
+border-radius:24px;
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,0.12);
+
+box-shadow:
+0 0 40px rgba(255,255,255,0.05);
+
+text-align:center;
+
+
+}
+
+.glass-card h1{
+margin-bottom:15px;
+}
+
+.glass-card h2{
+margin-bottom:15px;
+line-height:1.5;
+}
+
+.glass-card p{
+line-height:1.8;
+}
+
+/* ==========================================
+INPUTS
+========================================== */
+
+input{
+
+ 
+width:100%;
+
+margin-top:20px;
+margin-bottom:20px;
+
+padding:14px;
+
+border:none;
+
+outline:none;
+
+border-radius:12px;
+
+background:
+rgba(255,255,255,0.15);
+
+color:white;
+
+font-size:16px;
+ 
+
+}
+
+input::placeholder{
+color:#ddd;
+}
+
+/* ==========================================
+BUTTONS
+========================================== */
+
+button{
+
+ 
+border:none;
+
+cursor:pointer;
+
+padding:12px 24px;
+
+border-radius:12px;
+
+margin:8px;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:0.3s;
+
+background:
+linear-gradient(
+135deg,
+#ffd700,
+#ffb347
+);
+
+color:#111;
+ 
+
+}
+
+button:hover{
+
+ 
+transform:translateY(-3px);
+
+box-shadow:
+0 0 20px rgba(255,215,0,0.5);
+ 
+
+}
+
+button:active{
+
+ 
+transform:scale(0.97);
+ 
+
+}
+
+/* ==========================================
+ERROR MESSAGE
+========================================== */
+
+.error{
+
+ 
+margin-top:10px;
+
+color:#ff8a8a;
+
+font-weight:600;
+ 
+
+}
+
+/* ==========================================
+BIRTHDAY PAGE
+========================================== */
+
+.birthday-heading{
+
+ 
+font-size:2.2rem;
+
+margin-bottom:20px;
+
+color:#ffd700;
+
+text-shadow:
+0 0 20px gold;
+ 
+
+}
+
+.emoji-line{
+
+ 
+margin-top:20px;
+
+font-size:1.8rem;
+ 
+
+}
+
+/* ==========================================
+MEMORY PAGE
+========================================== */
+
+.memory-card{
+
+ 
+max-width:850px;
+ 
+
+}
+
+#typewriter{
+
+height:220px;
+
+overflow-y:auto;
+
+text-align:left;
+
+margin-top:20px;
+
+white-space:pre-wrap;
+
+line-height:2;
+
+font-size:1rem;
+
+border-left:3px solid gold;
+
+padding-left:15px;
+
+}
+
+/* ==========================================
+MUSIC PAGE
+========================================== */
+
+.music-text{
+
+ 
+margin-bottom:25px;
+
+font-size:1.1rem;
+ 
+
+}
+
+/* ==========================================
+PHOTO GALLERY
+========================================== */
+
+.gallery-container{
+
+margin-top:20px;
+
+width:100%;
+
+max-width:450px;
+
+height:500px;
+
+margin-left:auto;
+
+margin-right:auto;
+
+overflow:hidden;
+
+border-radius:20px;
+
+}
+
+#galleryImage{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+border-radius:20px;
+
+border:2px solid
+rgba(255,255,255,0.2);
+
+box-shadow:
+0 0 25px rgba(255,255,255,0.1);
+
+transition:0.5s;
+
+}
+
+.gallery-buttons{
+margin-top:20px;
+}
+
+/* ==========================================
+FINAL LETTER
+========================================== */
+
+.final-card{
+
+ 
+max-height:85vh;
+
+overflow-y:auto;
+
+text-align:left;
+ 
+
+}
+
+.final-card h1{
+
+ 
+text-align:center;
+
+margin-bottom:25px;
+
+color:#ffd700;
+ 
+
+}
+
+.final-card p{
+
+ 
+margin-bottom:18px;
+ 
+
+}
+
+.quote{
+
+ 
+font-style:italic;
+
+font-size:1.05rem;
+
+color:#ffe27a;
+ 
+
+}
+
+/* ==========================================
+MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+ 
+.glass-card{
+
+    padding:22px;
+
+}
+
+.birthday-heading{
+
+    font-size:1.6rem;
+
+}
+
+button{
+
+    width:100%;
+
+}
+ 
+
+}
+/* ==========================================
+FIREFLIES
+========================================== */
+
+#fireflies{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+z-index:0;
+}
+
+.firefly{
+position:absolute;
+width:6px;
+height:6px;
+border-radius:50%;
+
+ 
+background:#ffd700;
+
+box-shadow:
+0 0 10px #ffd700,
+0 0 20px #ffd700;
+
+animation:
+floatFirefly linear infinite,
+blinkFirefly ease-in-out infinite;
+ 
+
+}
+
+@keyframes floatFirefly{
+
+ 
+from{
+    transform:translateY(100vh);
+}
+
+to{
+    transform:translateY(-120px);
+}
+ 
+
+}
+
+@keyframes blinkFirefly{
+
+ 
+0%,100%{
+    opacity:0.2;
+}
+
+50%{
+    opacity:1;
+}
+ 
+
+}
+
+/* ==========================================
+CANDLE SECTION
+========================================== */
+
+.candle-scene{
+    display:flex;
+    justify-content:center;
+    margin:60px 0 30px;
+}
+
+.mini-cake{
+
+ 
+width:180px;
+height:80px;
+
+border-radius:20px;
+
+background:
+linear-gradient(
+to bottom,
+#ffb6c1,
+#ff8da1
+);
+
+position:relative;
+
+box-shadow:
+0 0 25px rgba(255,182,193,0.3);
+ 
+
+}
+
+.candle{
+
+ 
+position:absolute;
+
+width:14px;
+height:60px;
+
+background:white;
+
+left:50%;
+top:-45px;
+
+transform:translateX(-50%);
+
+border-radius:8px;
+ 
+
+}
+
+#flame{
+    position:absolute;
+    width:22px;
+    height:32px;
+
+    top:-28px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:
+    radial-gradient(circle,
+    #fff8b0 0%,
+    #ffd700 45%,
+    orange 100%);
+
+    border-radius:50% 50% 50% 50%;
+
+    box-shadow:
+    0 0 15px #ffd700,
+    0 0 30px orange,
+    0 0 60px gold;
+
+    animation:flicker 0.15s infinite alternate;
+}
+
+@keyframes flicker{
+
+    from{
+        transform:
+        translateX(-50%)
+        rotate(-3deg)
+        scale(1);
+    }
+
+    to{
+        transform:
+        translateX(-50%)
+        rotate(3deg)
+        scale(1.15);
+    }
+
+}
+
+/* ==========================================
+TOP VIEW CAKE
+========================================== */
+
+#cakeContainer{
+
+ 
+display:flex;
+justify-content:center;
+
+margin-top:25px;
+
+cursor:pointer;
+ 
+
+}
+
+.cake{
+
+ 
+width:220px;
+height:220px;
+
+border-radius:50%;
+
+position:relative;
+
+background:
+radial-gradient(
+circle,
+#fff7c2,
+#ffcf5a
+);
+
+border:8px solid #ffb347;
+
+box-shadow:
+0 0 40px rgba(255,215,0,0.4);
+
+transition:1s;
+ 
+
+}
+
+.cake::before{
+
+ 
+content:"🎂";
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:
+translate(-50%,-50%);
+
+font-size:60px;
+ 
+
+}
+
+.cake.cut{
+
+transform:
+scale(0.95);
+
+}
+
+.cake.cut::after{
+
+content:"";
+
+position:absolute;
+
+width:5px;
+
+height:100%;
+
+background:white;
+
+left:50%;
+
+top:0;
+
+transform:
+translateX(-50%);
+
+box-shadow:
+0 0 15px white;
+
+animation:
+cakeSlice 1s ease;
+
+}
+
+@keyframes cakeSlice{
+
+0%{
+
+height:0;
+
+top:50%;
+
+}
+
+100%{
+
+height:100%;
+
+top:0;
+
+}
+
+}
+
+.cake.cut::after{
+
+ 
+content:"";
+
+position:absolute;
+
+width:4px;
+height:100%;
+
+background:white;
+
+left:50%;
+top:0;
+
+transform:
+translateX(-50%);
+ 
+
+}
+
+/* ==========================================
+CAKE MESSAGE
+========================================== */
+
+#cakeMessage{
+
+ 
+margin-top:20px;
+
+font-size:1.1rem;
+
+color:#ffd700;
+ 
+
+}
+
+/* ==========================================
+COUNTDOWN
+========================================== */
+
+#countdown{
+
+ 
+margin-top:20px;
+
+color:#ffd700;
+
+font-size:2rem;
+
+text-shadow:
+0 0 20px gold;
+ 
+
+}
+
+#wishText{
+
+ 
+margin-top:15px;
+
+color:#ffe27a;
+ 
+
+}
+
+/* ==========================================
+PHOTO ANIMATION
+========================================== */
+
+#galleryImage{
+
+width:100%;
+
+max-width:450px;
+
+border-radius:20px;
+
+border:2px solid rgba(255,255,255,0.2);
+
+box-shadow:
+0 0 25px rgba(255,255,255,0.1);
+
+animation:
+photoZoom 3s linear;
+
+}
+
+@keyframes photoFade{
+
+ 
+from{
+    opacity:0;
+    transform:scale(0.95);
+}
+
+to{
+    opacity:1;
+    transform:scale(1);
+}
+ 
+
+}
+
+@keyframes photoZoom{
+
+from{
+
+    transform:
+    scale(1)
+    rotate(0deg);
+
+}
+
+to{
+
+    transform:
+    scale(1.08)
+    rotate(1deg);
+
+}
+
+}
+
+/* ==========================================
+SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#111827;
+}
+
+::-webkit-scrollbar-thumb{
+background:#ffd700;
+border-radius:10px;
+}
+
+/* ==========================================
+FINAL PAGE GLOW
+========================================== */
+
+.final-card{
+
+ 
+box-shadow:
+0 0 50px rgba(255,215,0,0.15);
+ 
+
+}
+
+.final-card h3{
+
+ 
+text-align:center;
+
+color:#ffd700;
+ 
+
+}
+
+.final-card p:last-child{
+
+ 
+text-align:center;
+ 
+
+}
+
+/* ==========================================
+GOLDEN GLOW EFFECT
+========================================== */
+
+.glass-card{
+
+ 
+position:relative;
+z-index:1;
+ 
+
+}
+
+.glass-card::before{
+
+ 
+content:"";
+
+position:absolute;
+
+inset:-2px;
+
+border-radius:24px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,215,0,0.15),
+transparent,
+rgba(255,215,0,0.15)
+);
+
+z-index:-1;
+ 
+
+}
+
+/* ==========================================
+SMALL SCREEN FIX
+========================================== */
+
+@media(max-width:768px){
+
+ 
+.cake{
+
+    width:180px;
+    height:180px;
+}
+
+.cake::before{
+
+    font-size:48px;
+}
+
+.mini-cake{
+
+    width:150px;
+}
+ 
+
+}
+
+/* ==========================================
+WISH PAGE
+========================================== */
+
+#birthdayWish{
+
+width:100%;
+height:180px;
+
+padding:15px;
+
+border:none;
+outline:none;
+
+resize:none;
+
+border-radius:15px;
+
+font-size:16px;
+
+font-family:'Poppins',sans-serif;
+
+background:
+rgba(255,255,255,0.12);
+
+color:white;
+
+margin-top:20px;
+
+}
+
+#birthdayWish::placeholder{
+
+color:#ddd;
+
+}
+
+textarea{
+
+width:100%;
+
+height:150px;
+
+padding:15px;
+
+border:none;
+
+outline:none;
+
+border-radius:15px;
+
+background:rgba(255,255,255,0.12);
+
+color:white;
+
+font-size:16px;
+
+resize:none;
+
+}
+
+
+.gift-image{
+
+width:100%;
+
+max-width:350px;
+
+border-radius:20px;
+
+margin-top:20px;
+
+box-shadow:
+0 0 30px rgba(255,215,0,0.25);
+
+animation:
+giftFloat 3s ease-in-out infinite;
+
+}
+
+@keyframes giftFloat{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+
+#letterCover{
+
+text-align:center;
+
+padding:40px;
+
+animation:
+pulseLetter 2s infinite;
+
+}
+
+@keyframes pulseLetter{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.03);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+@keyframes letterOpen{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(40px)
+scale(0.9);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+}
+
+
+/* ==========================================
+LETTER OPEN ANIMATION
+========================================== */
+
+#finalMessage{
+
+
+transition:1.5s;
+
+}
+
+#finalMessage.show{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+
+.cake.cut{
+
+animation:
+cakeShake 0.8s ease;
+
+}
+
+@keyframes cakeShake{
+
+0%{
+transform:rotate(0deg);
+}
+
+25%{
+transform:rotate(-3deg);
+}
+
+50%{
+transform:rotate(3deg);
+}
+
+75%{
+transform:rotate(-2deg);
+}
+
+100%{
+transform:rotate(0deg);
+}
+
+}
+
+/* ==========================================
+SMOKE EFFECT
+========================================== */
+
+#smoke{
+
+position:absolute;
+
+width:20px;
+height:20px;
+
+background:
+rgba(255,255,255,0.7);
+
+border-radius:50%;
+
+left:50%;
+
+top:-35px;
+
+transform:
+translateX(-50%);
+
+opacity:0;
+
+pointer-events:none;
+
+}
+
+#smoke.show{
+
+animation:
+smokeRise 2s ease forwards;
+
+}
+
+@keyframes smokeRise{
+
+0%{
+
+opacity:0.8;
+
+transform:
+translateX(-50%)
+scale(0.5);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translateX(-50%)
+translateY(-80px)
+scale(2);
+
+}
+
+}

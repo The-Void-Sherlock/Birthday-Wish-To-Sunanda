@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sunanda 🌼</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<!-- Fireflies Container -->
+
+<div id="fireflies"></div>
+
+<!-- ================================================= -->
+
+<!-- PAGE 1 : PASSWORD -->
+
+<!-- ================================================= -->
+
+<section class="page active" id="page1">
+
+
+<div class="glass-card">
+
+    <h1>🔒</h1>
+
+    <h2>Je name ami toke dakte valobasi</h2>
+
+    <input
+        type="password"
+        id="password1"
+        placeholder="Enter Password">
+
+    <button onclick="checkPassword1()">
+        Continue →
+    </button>
+
+    <p id="error1" class="error"></p>
+
+</div>
+
+
+</section>
+
+<!-- ================================================= -->
+
+<!-- PAGE 2 : CANDLE -->
+
+<!-- ================================================= -->
+
+<section class="page" id="page2">
+
+
+<div class="glass-card">
+
+    <h1>🕯️</h1>
+
+    <h2>BLOW THE CANDLE</h2>
+
+    <p>
+        
+    </p>
+
+    <div class="candle-scene">
+
+        <div class="mini-cake">
+
+            <div class="candle">
+
+                <div id="flame"></div>
+                <div id="smoke"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <button id="blowBtn">
+        Blow Candle 🎂
+    </button>
+
+    <h2 id="countdown"></h2>
+
+    <p id="wishText"></p>
+
+</div>
+
+
+</section>
+
+<!-- ================================================= -->
+<!-- PAGE 3 : BIRTHDAY WISH -->
+<!-- ================================================= -->
+
+<section class="page" id="page3">
+
+    <div class="glass-card">
+
+        <h1>🌠</h1>
+
+        <h2>Make A Birthday Wish</h2>
+
+        <p>
+            Write your wish before moving ahead ✨
+        </p>
+
+        <textarea
+        id="birthdayWish"
+        placeholder="Write your wish here...">
+        </textarea>
+
+        <br><br>
+
+        <button onclick="submitWish()">
+            Send To The Stars ✨
+        </button>
+
+        <p id="wishError" class="error"></p>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+
+<!-- PAGE 4 : CAKE CUTTING -->
+
+<!-- ================================================= -->
+
+<section class="page" id="page4">
+
+
+<div class="glass-card">
+
+    <h1>🎂</h1>
+
+    <h2>CUT THE CAKE</h2>
+
+    <p>
+        TAP ON THE CAKE TO CUT
+    </p>
+
+    <div id="cakeContainer">
+
+        <div class="cake">
+
+            <div class="cake-top"></div>
+
+            <div class="cake-middle"></div>
+
+            <div class="cake-bottom"></div>
+
+        </div>
+
+    </div>
+
+    <p id="cakeMessage"></p>
+
+</div>
+
+
+</section>
+
+<!-- ================================================= -->
+
+<!-- PAGE 5 : HAPPY BIRTHDAY -->
+
+<!-- ================================================= -->
+
+<section class="page" id="page5">
+
+
+<div class="glass-card">
+
+    <h1 class="birthday-heading">
+        🎉 HAPPY BIRTHDAY SUNANDA 🎉
+    </h1>
+
+    <h2>
+        🌼✨ May your smile never fade ✨🌼
+    </h2>
+
+    <p class="emoji-line">
+        🎂 🎈 ❤️ 🎁 ✨
+    </p>
+
+    <button onclick="goToPage(6)">
+        Continue →
+    </button>
+
+</div>
+
+
+</section>
+
+<!-- ================================================= -->
+
+<!-- PAGE 6 : SECOND PASSWORD -->
+
+<!-- ================================================= -->
+
+<section class="page" id="page6">
+
+
+<div class="glass-card">
+
+    <h2>
+        ENTER PASSWORD TO PROCEED FURTHER
+    </h2>
+
+    <p>
+        Tor kache theke je name daka sunte chai ami
+    </p>
+
+    <input
+        type="password"
+        id="password2"
+        placeholder="Enter Password">
+
+    <button onclick="checkPassword2()">
+        Continue →
+    </button>
+
+    <p id="error2" class="error"></p>
+
+</div>
+
+
+</section>
+
+<!-- ================================================= -->
+
+<!-- PAGE 7 : MEMORY SECTION -->
+
+<!-- ================================================= -->
+
+<section class="page" id="page7">
+
+
+<div class="glass-card memory-card">
+
+    <h2>
+        💭 Some Memories...
+    </h2>
+
+    <div id="typewriter"></div>
+
+    <button id="memoryNext">
+        Next →
+    </button>
+
+</div>
+
+
+</section>
+<!-- ================================================= -->
+
+<!-- PAGE 8 : MUSIC SECTION -->
+
+<!-- ================================================= -->
+
+<section class="page" id="page8">
+
+
+<div class="glass-card">
+
+    <h2>🎵 Music Moment</h2>
+
+    <p class="music-text">
+        Ei gan ta tokhon amake bolte chaitis ❤️
+    </p>
+
+    <audio id="birthdaySong">
+        <source src="music/kaise-bataye.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="playMusic">
+        ▶ Play Song
+    </button>
+
+    <button id="skipMusic">
+        Skip →
+    </button>
+
+</div>
+
+
+</section>
+
+<!-- ================================================= -->
+
+<!-- PAGE 9 : PHOTO GALLERY -->
+
+<!-- ================================================= -->
+
+<section class="page" id="page9">
+
+
+<div class="glass-card">
+
+    <h2>📸 Some Moments</h2>
+
+    <p>
+        A few memories worth keeping 🌼
+    </p>
+
+    <div class="gallery-container">
+
+        <img
+            id="galleryImage"
+            src="images/photo1.jpg"
+            alt="Memory">
+
+    </div>
+
+    <div class="gallery-buttons">
+
+        <button id="nextPhoto">
+            Next Photo →
+        </button>
+
+        <button onclick="goToPage(10)">
+            Small Gift🌼 →
+        </button>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- ================================================= -->
+<!-- PAGE 10 : SMALL GIFT -->
+<!-- ================================================= -->
+
+<section class="page" id="page10">
+
+<div class="glass-card">
+
+    <h1>🌼</h1>
+
+    <h2>Small Gift For You</h2>
+
+    <p>
+        Just a little something for you 💛
+    </p>
+
+    <img
+    src="images/gift.jpg"
+    class="gift-image"
+    alt="Gift">
+
+    <br><br>
+
+    <button onclick="goToPage(11)">
+        Open Final Letter 💌
+    </button>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+
+<!-- PAGE 11 : FINAL MESSAGE -->
+
+<!-- ================================================= -->
+
+<section class="page" id="page11">
+
+
+<div class="glass-card final-card">
+
+    <div id="letterCover">
+
+    <h1>💌</h1>
+
+    <h2>A Letter For You</h2>
+
+    <p>
+        One last thing before you go...
+    </p>
+
+    <button onclick="openLetter()">
+        Open Letter ✨
+    </button>
+
+</div>
+
+    <div id="finalMessage" style="display:none;">
+
+        <h1>
+            Happy Birthday, Sunanda 🌼
+        </h1>
+
+        <p>
+            আজকে আমার কাছে একটা বিশাল special দিন। কী ভাগ্য যে তুই আজকের দিনে জন্মেছিলি, নাহলে বল তো, আমি কোথায় খুঁজে পেতাম তোকে! 😀
+        </p>
+
+        <p>
+            আশা রাখি, এই নতুন জন্মবর্ষটা তোর আরও ভালোভাবে কাটবে। সমস্ত দুঃখ, বাধা আর বিপত্তি কাটিয়ে তুই নিজের লক্ষ্যের দিকে এগিয়ে যেতে পারবি, নিজের স্বপ্নগুলো পূরণ করতে পারবি।
+        </p>
+
+        <p>
+            আগের খারাপ স্মৃতিগুলোর কথা মনে এলে সেগুলোকে একটু পাশ কাটিয়ে, তোর জীবনের ভালো মুহূর্তগুলো মনে করার চেষ্টা করিস। আর এভাবেই একদিন, দিনের শেষে, তুই নিজেকে বলতে পারবি—
+        </p>
+
+        <p class="quote">
+            "যাই হোক, জীবন তো এইভাবেই চলে।" ❤️
+        </p>
+
+        <p>
+            আর আমি তোকে এই wish message-এ স্বভাব অনুযায়ী motivate করব না, তা কি হয়! 😂
+        </p>
+
+        <p>
+            So, here's something for you—
+        </p>
+
+        <p class="quote">
+            "Nobody believes in you. You have lost again and again and again. The lights are cut off, but you're still looking at your dream, reviewing it every day and saying to yourself: It's not over until I win."
+        </p>
+
+        <p>
+            আজকে মাত্র এইটুকুই।
+        </p>
+
+        <br>
+
+        <h3>
+            — YOUR Anurodh
+        </h3>
+
+        <p>
+            Signing off, Bye Bye 👋
+        </p>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
